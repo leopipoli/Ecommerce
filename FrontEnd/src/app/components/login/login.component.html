@@ -1,35 +1,49 @@
-<div class="card-align">
-    <mat-card>
-        <mat-card-title style="padding: 12px;">
-            Login
-        </mat-card-title>
-        <mat-divider></mat-divider>
-        <mat-card-content style="margin-bottom: 12%; margin-top: 7%;">
-            <form class="form">
-                <mat-form-field class="input-elements">
-                    <mat-label>Email</mat-label>
-                    <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" placeholder="Ex. pat@example.com">
-                    @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
-                        <mat-error>Pro favor, insira um endereço de e-mail válido</mat-error>
-                    }
-                    @if (emailFormControl.hasError('required')) {
-                        <mat-error>E-mail é <strong>obrigatório</strong></mat-error>
-                    }
-                </mat-form-field>
-                <mat-form-field class="input-elements">
-                    <mat-label>Senha</mat-label>
-                    <input type="password" matInput [formControl]="passwordFormControl" placeholder="*********">
-                    @if (passwordFormControl.hasError('required')) {
-                        <mat-error>Senha é <strong>obrigatória</strong></mat-error>
-                    }
-                </mat-form-field>  
-                <div class="input-elements" style="margin-top: 0px; text-decoration: underline;">
-                    <span>Redefinir Senha</span>
-                </div>     
-                <div class="input-elements">
-                    <button type="submit" mat-raised-button>Login</button>
-                </div>
-            </form>
-        </mat-card-content>
-    </mat-card>
+
+<div class="page-background">
+    <table>
+        <tr>
+        <td width="50%">  
+            <div style="margin-left: 27%; margin-top: 11%;">
+                <img src="assets/logo.png" width="400px" height="400px">
+            </div>
+        </td>
+        <td width="40%">        
+            <div class="card-align">
+                <mat-card>
+                    <mat-card-title style="padding: 12px;">
+                        Entrar
+                    </mat-card-title>
+                    <mat-divider></mat-divider>
+                    <mat-card-content style="margin-bottom: 8%;">
+                        <form style="margin: 5%;">
+                            <mat-form-field class="input-elements">
+                                <mat-label>Email</mat-label>
+                                <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" placeholder="Ex. pat@example.com">
+                                @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+                                    <mat-error>Pro favor, insira um endereço de e-mail válido</mat-error>
+                                }
+                                @if (emailFormControl.hasError('required')) {
+                                    <mat-error>E-mail é <strong>obrigatório</strong></mat-error>
+                                }
+                            </mat-form-field>
+                            <mat-form-field class="input-elements">
+                                <mat-label>Senha</mat-label>
+                                <input type="password" matInput [formControl]="passwordFormControl" placeholder="*********">
+                                @if (passwordFormControl.hasError('required')) {
+                                    <mat-error>Senha é <strong>obrigatória</strong></mat-error>
+                                }
+                            </mat-form-field>  
+                            <div class="input-elements" style="margin-top: 0px; text-decoration: underline;">
+                                <span>Redefinir Senha</span>
+                            </div>     
+                            <div class="input-elements row-button">
+                                <button type="submit" mat-raised-button>Entrar</button>
+                            </div>
+                        </form>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </td>
+        </tr>
+    </table>
 </div>

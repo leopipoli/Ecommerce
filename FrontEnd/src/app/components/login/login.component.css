@@ -1,17 +1,21 @@
-.form {
-    max-width: 392px;
-    width: 100%;
-}  
+.page-background {
+    height: 100vh;
+    background: rgb(255, 246, 229)
+}
 
 .card-align{
-    padding-left: 55%;
-    padding-right: 15%;
-    padding-top: 3%;
+    margin-top: 14%;
+    margin-right: 18%;
+    margin-left: 18%;
 }
 
 .input-elements{
-    margin-left: 18px;
-    margin-top: 10%;
+    margin-top: 8%;
     display: inline-flex; 
     width: 100%;
+}
+
+.row-button{
+    display: flex;
+    justify-content: end;
 }
