@@ -1,21 +1,44 @@
 .page-background {
-    height: 100vh;
-    background: rgb(255, 246, 229)
-}
-
-.card-align{
-    margin-top: 14%;
-    margin-right: 18%;
-    margin-left: 18%;
-}
-
-.input-elements{
-    margin-top: 8%;
-    display: inline-flex; 
-    width: 100%;
-}
-
-.row-button{
     display: flex;
-    justify-content: end;
-}
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(255, 246, 229);
+    margin: 0;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px; 
+    gap: 200px;
+  }
+  
+  .logo {
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+  }
+  
+  .form-container {
+    flex: 1;
+    max-width: 500px; 
+  }
+  
+  mat-form-field {
+    display: block;
+    width: 100%;
+    margin-bottom: 16px; 
+  }
+  
+  .input-elements {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row-button{
+    text-align: end;
+  }
+  
