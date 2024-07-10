@@ -1,0 +1,97 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the custom primary palette with the two shades of orange
+$ecommFrontEnd-primary: mat.define-palette((
+  50: #fef6e5,
+  100: #fde3b8,
+  200: #f9af23,
+  300: #f6970d,
+  400: #f68c04,
+  500: #f58013,
+  600: #e07011,
+  700: #d05f0f,
+  800: #b8500d,
+  900: #a03e0b,
+  A100: #f9af23,
+  A200: #f9af23,
+  A400: #f58013,
+  A700: #f58013,
+  contrast: (
+    50: rgba(0, 0, 0, 0.87),
+    100: rgba(0, 0, 0, 0.87),
+    200: rgba(0, 0, 0, 0.87),
+    300: rgba(0, 0, 0, 0.87),
+    400: rgba(0, 0, 0, 0.87),
+    500: rgba(0, 0, 0, 0.87),
+    600: rgba(0, 0, 0, 0.87),
+    700: rgba(0, 0, 0, 0.87),
+    800: rgba(0, 0, 0, 0.87),
+    900: rgba(0, 0, 0, 0.87),
+    A100: rgba(0, 0, 0, 0.87),
+    A200: rgba(0, 0, 0, 0.87),
+    A400: rgba(0, 0, 0, 0.87),
+    A700: rgba(0, 0, 0, 0.87)
+  )
+));
+
+// Define the custom accent palette with a single shade of orange
+$ecommFrontEnd-accent: mat.define-palette((
+  50: #fff6e5,
+  100: #ffebd8,
+  200: #f9af23,
+  300: #f3a914,
+  400: #f1a10e,
+  500: #f9af23,
+  600: #f99c1d,
+  700: #f68f1b,
+  800: #f58013,
+  900: #f35c08,
+  A100: #ffebd8,
+  A200: #f9af23,
+  A400: #f58013,
+  A700: #f58013,
+  contrast: (
+    50: rgba(0, 0, 0, 0.87),
+    100: rgba(0, 0, 0, 0.87),
+    200: rgba(0, 0, 0, 0.87),
+    300: rgba(0, 0, 0, 0.87),
+    400: rgba(0, 0, 0, 0.87),
+    500: rgba(0, 0, 0, 0.87),
+    600: rgba(0, 0, 0, 0.87),
+    700: rgba(0, 0, 0, 0.87),
+    800: rgba(0, 0, 0, 0.87),
+    900: rgba(0, 0, 0, 0.87),
+    A100: rgba(0, 0, 0, 0.87),
+    A200: rgba(0, 0, 0, 0.87),
+    A400: rgba(0, 0, 0, 0.87),
+    A700: rgba(0, 0, 0, 0.87)
+  )
+));
+
+// The warn palette is optional (defaults to red). You can use any color you prefer for warning.
+$ecommFrontEnd-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$ecommFrontEnd-theme: mat.define-light-theme((
+  color: (
+    primary: $ecommFrontEnd-primary,
+    accent: $ecommFrontEnd-accent,
+    warn: $ecommFrontEnd-warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($ecommFrontEnd-theme);
